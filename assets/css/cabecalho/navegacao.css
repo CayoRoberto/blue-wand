@@ -1,0 +1,128 @@
+.cabecalho__menu {
+    display: flex;
+    align-items: center;
+    width: 360px;
+    justify-content: space-between;
+}
+
+.cabecalho__item-menu {
+    text-decoration: none;
+}
+
+.cabecalho__menu-texto {
+    color: var(--branco);
+    font-family: var(--barlow);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.geral__botao {
+    border: 2px solid var(--branco);
+    padding: 10px 30px;
+    border-radius: 60px;
+    font-family: var(--barlow);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.geral__botao:hover {
+    transform: scale(1.1);
+}
+
+.primary-button {
+    background-color: var(--branco);
+    color: var(--azul);
+}
+
+.secundary-button {
+    background-color: transparent;
+    color: var(--branco);
+}
+
+.cabecalho__item-menu--logo {
+    display: none;
+}
+
+.ri-close-line {
+    display: none;
+}
+
+@media screen and (min-width: 1140px) {
+    .cabecalho__menu {
+        width: 390px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .cabecalho__menu {
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: center;
+        left: 0px;
+        background-color: var(--branco);
+        color: var(--azul);
+        top: 96px;
+        width: 100vw;
+        box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.11);
+        z-index: 4;
+        position: absolute;
+        padding-top: 88px;
+    }
+
+    .cabecalho__item-menu--logo {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 18px;
+        left: 22px;
+    }
+
+    .cabecalho__item-menu--logo img {
+        width: 100%;
+    }
+
+    .ri-close-line {
+        display: block;
+        text-align: center;
+        justify-self: flex-end;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        /* background-color: #0091ff1c; */
+        border-radius: 100%;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+
+    .cabecalho__menu-texto,
+    .cabecalho__item-menu .secundary-button,
+    .cabecalho__item-menu .primary-button {
+        color: var(--azul);
+        background-color: transparent;
+    }
+    
+    .cabecalho__item-menu {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .cabecalho__item-menu:hover {
+        background-color: #0091ff1c;
+    }
+
+    .cabecalho__item-menu .geral__botao {
+        background-color: none;
+        border: none;
+        padding: 0;
+    }
+
+    .cabecalho__item-menu .geral__botao:hover {
+        transform: scale(1);
+    }
+
+}
